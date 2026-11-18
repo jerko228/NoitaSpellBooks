@@ -1,0 +1,9 @@
+name: NoitaSpellBooks
+version: 1.0.0
+main: ua.spellbooks.noita.NoitaSpellBooks
+api-version: '1.20'
+description: Modular Noita-style spellcrafting via written books
+commands:
+  spellwords:
+    description: Shows the list of 30 available spell tokens
+    usage: /spellwords
