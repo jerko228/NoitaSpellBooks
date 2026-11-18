@@ -27,7 +27,7 @@ public class SpellExecutor {
 
         if (now < readyAt) {
             double left = (readyAt - now) / 1000.0;
-            player.sendActionBar(ChatColor.RED + "Перезарядка: " + String.format("%.1f", left) + "с");
+            player.sendAction(ChatColor.RED + "Перезарядка: " + String.format("%.1f", left) + "с");
             return false;
         }
 
