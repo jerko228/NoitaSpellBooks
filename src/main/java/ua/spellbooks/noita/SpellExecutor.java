@@ -27,8 +27,10 @@ public class SpellExecutor {
 
         if (now < readyAt) {
             double left = (readyAt - now) / 1000.0;
-            player.sendAction(ChatColor.RED + "Перезарядка: " + String.format("%.1f", left) + "с");
-            return false;
+           player.spigot().sendMessage(
+    net.md_5.bungee.api.ChatMessageType.ACTION_BAR,
+    net.md_5.bungee.api.chat.TextComponent.fromLegacyText("Перезарядка")
+);
         }
 
         cooldowns.put(player.getUniqueId(), now + cdMillis);
